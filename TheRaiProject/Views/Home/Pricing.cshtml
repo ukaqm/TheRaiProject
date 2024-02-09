@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Pricing";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="numHours">Number of Hours:</label>
+                    <input type="number" class="form-control" id="numHours" placeholder="Enter number of hours">
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="hourlyRate">Hourly Rate ($):</label>
+                    <input type="text" class="form-control" id="hourlyRate" value="50" readonly>
+                </div>
+                <br />
+                <button type="button" class="btn btn-primary" id="calculateTotal">Calculate Total</button>
+                <br /><br />
+                <div class="form-group">
+                    <label for="totalCost">Total Cost ($):</label>
+                    <input type="text" class="form-control" id="totalCost" readonly>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
