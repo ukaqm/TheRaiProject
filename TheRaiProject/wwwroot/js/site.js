@@ -3,18 +3,18 @@
 
 // Write your JavaScript code.
 
-$(document).ready(function () {
-    $("#calculateTotal").click(function () {
-        var numHours = $("#numHours").val();
-        var hourlyRate = $("#hourlyRate").val();
+//Event handler and grabbing valiues for numHours and fixed hourlyRate.
+$("#calculateTotal").click(function () {
+    var numHours = $("#numHours").val();
+    var hourlyRate = $("#hourlyRate").val();
 
-        // Validation for positive number
-        if (numHours <= 0 || isNaN(numHours)) {
-            alert("Please enter a positive number for the hours.");
-            return;
-        }
+    // Validation for positive number
+    if (numHours <= 0 || isNaN(numHours)) {
+        alert("Please enter a valid number for the hours.");
+        return;
+    }
 
-        var totalCost = numHours * hourlyRate;
-        $("#totalCost").val(totalCost.toFixed(2)); // Display total cost with two decimal places
-    });
+    // Display total cost with two decimal places
+    var totalCost = numHours * hourlyRate;
+    $("#totalCost").val(totalCost.toFixed(2)); 
 });
